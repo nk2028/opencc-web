@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hant-x-opencc" dir="ltr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OpenCC 2 Web Interface</title>
+  <!-- Codemirror -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/addon/display/placeholder.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"/>
+  <!-- moedict -->
+  <script src="https://cdn.fm.sgn.shn.hk:27143/moedict-char.js"></script>
+  <!-- index.files -->
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+  <h1>OpenCC 2 Web Interface</h1>
+  <div id="converter">
+    <div id="converterFront"></div><div id="centralDiv">
+      <p id="converterPanel">
+        <span id="converterMiddleFront"></span>
+        <select id="converterSelect" onchange="startExplain()"></select>
+        <span id="converterMiddleBack"></span>
+      </p>
+
+      <p>
+        <input type="button" value="切換分詞" id="converterSwitchSegmentation" onclick="startSwitch()"/>
+        <input type="button" value="推上結果" onclick="startPush()"/>
+      </p>
+
+      <form onsubmit="startConvert(); return false">
+        <p><span>方案：</span> <select id="convertScheme">
+          <option value="from">從</option>
+          <option value="to">到</option>
+        </select> <select id="convertRegion">
+          <option value="cn">中國大陸</option>
+          <option value="hk">香港</option>
+          <option value="tw">臺灣</option>
+          <option value="twp">臺灣（轉換詞彙）</option>
+          <option value="jp">日本</option>
+        </select></p>
+        <p><input class="primary" type="submit" value="啓動轉換"/></p>
+      </form>
+
+      <div id="converterExplain"></div>
+      <p id="converterNotification"></p>
+    </div><div id="converterBack"></div>
+  </div>
+</body>
+</html>

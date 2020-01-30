@@ -1,0 +1,160 @@
+#converter > * {
+	vertical-align: top;
+}
+
+#converter {
+	display: flex;
+}
+
+#centralDiv, #converterFront, #converterBack {
+	border: 1px solid;
+	flex: 1;
+}
+
+#converterPanel > * {
+	vertical-align: middle;
+}
+
+#converterPanel > :empty {
+	display: none;
+}
+
+#converter > div + div {
+	border-left: none;
+}
+
+#converter > div {
+	display: inline-block;
+}
+
+.CodeMirror {
+	font-family: initial !important;
+	height: auto;
+}
+
+#converterFront, #converterFront .CodeMirror {
+	background-color: #ccc;
+}
+
+#centralDiv {
+	padding: .8em 1em;
+}
+
+#converterNotification {
+  color: red;
+}
+
+#converterNotification:empty {
+  display: none;
+}
+
+select:disabled {
+	color: #ccc;
+}
+
+input[type="button"]:disabled {
+    border: none;
+    background-image: none;
+    opacity: .4;
+    cursor: not-allowed;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+input[type="color"]:focus, input[type="date"]:focus, input[type="datetime-local"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, select:focus, textarea:focus {
+    outline: 0;
+    border-color: #129fea;
+}
+
+input[type="color"], input[type="date"], input[type="datetime-local"], input[type="datetime"], input[type="email"], input[type="file"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
+    display: block;
+    margin: .25em 0;
+}
+
+select {
+    height: 2.1em;
+    border: 1px solid #ccc;
+    border-top-color: rgb(204, 204, 204);
+    border-right-color: rgb(204, 204, 204);
+    border-bottom-color: rgb(204, 204, 204);
+    border-left-color: rgb(204, 204, 204);
+    background-color: #fff;
+}
+
+input[type="color"], input[type="date"], input[type="datetime-local"], input[type="datetime"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
+    padding: 0 .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 3px #ddd;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type="button"]:active, input[type="submit"]:active {
+	-webkit-box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset,0 0 6px rgba(0,0,0,.2) inset;
+	box-shadow: 0 0 0 1px rgba(0,0,0,.15) inset, 0 0 6px rgba(0,0,0,.2) inset;
+	border-color: #000;
+}
+
+input[type="button"]:focus, input[type="button"]:hover, input[type="submit"]:focus, input[type="submit"]:hover {
+    background-image: -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(40%,rgba(0,0,0,.05)),to(rgba(0,0,0,.1)));
+    background-image: -webkit-linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+    background-image: linear-gradient(transparent,rgba(0,0,0,.05) 40%,rgba(0,0,0,.1));
+}
+input[type="button"].primary, input[type="submit"].primary {
+    background-color:  #0078e7;
+    color: #fff;
+}
+input[type="button"], input[type="submit"] {
+    font-family: inherit;
+    font-size: 100%;
+    padding: .3em .8em;
+    color: #444;
+    color: rgba(0,0,0,.8);
+    border: 1px solid #999;
+    border: none 
+    transparent;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    border-radius: 2px;
+    display: inline-block;
+    zoom: 1;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button, select {
+    text-transform: none;
+}
+button {
+    overflow: visible;
+}
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: inherit;
+    margin: 0;
+}
