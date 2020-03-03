@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const DICT_ROOT = 'https://cdn.jsdelivr.net/npm/opencc-data/data/';
+const DICT_ROOT = 'https://cdn.jsdelivr.net/npm/opencc-data@latest/data/';
 
 const DICT_FROM = { 'cn': ['STCharacters', 'STPhrases']
 	, 'hk': ['HKVariantsRev', 'HKVariantsRevPhrases']
