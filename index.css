@@ -6,9 +6,14 @@
 	display: flex;
 }
 
-#centralDiv, #converterFront, #converterBack {
+#centralDiv {
 	border: 1px solid;
-	flex: 1;
+	flex: 2;
+}
+
+#converterFront, #converterBack {
+	border: 1px solid;
+	flex: 3;
 }
 
 #converterPanel > * {
@@ -62,12 +67,12 @@ input[type="button"]:disabled {
     pointer-events: none;
 }
 
-input[type="color"]:focus, input[type="date"]:focus, input[type="datetime-local"]:focus, input[type="datetime"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, select:focus, textarea:focus {
+input[type="color"]:focus, input[type="date"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, select:focus, textarea:focus {
     outline: 0;
     border-color: #129fea;
 }
 
-input[type="color"], input[type="date"], input[type="datetime-local"], input[type="datetime"], input[type="email"], input[type="file"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
+input[type="color"], input[type="date"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
     display: block;
     margin: .25em 0;
 }

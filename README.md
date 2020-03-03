@@ -1,1 +1,3 @@
-in-browser implementation of OpenCC 2
+# opencc-web
+
+In-browser implementation of OpenCC

@@ -1,20 +1,16 @@
 'use strict';
 
+/* Initialize codemirror */
+
 let converterFrontArea, converterBackArea;
 
 document.addEventListener('DOMContentLoaded', () => {
-	/* Initialize codemirror */
-	converterFrontArea = CodeMirror(converterFront, {
-		lineWrapping: true
-	});
-	converterBackArea = CodeMirror(converterBack, {
-		lineWrapping: true,
-		placeholder: '在此輸入待轉換的文字…'
-	});
+	converterFrontArea = CodeMirror(converterFront, { lineWrapping: true });
+	converterBackArea = CodeMirror(converterBack, { lineWrapping: true, placeholder: '在此輸入待轉換的文字…', value: "遥襟甫畅，逸兴遄飞。爽籁发而清风生，纤歌凝而白云遏。睢园绿竹，气凌彭泽之樽；邺水朱华，光照临川之笔。四美具，二难并。穷睇眄于中天，极娱游于暇日。天高地迥，觉宇宙之无穷；兴尽悲来，识盈虚之有数。望长安于日下，目吴会于云间。地势极而南溟深，天柱高而北辰远。关山难越，谁悲失路之人；萍水相逢，尽是他乡之客。怀帝阍而不见，奉宣室以何年？" });
 });
 
 
-const DICT_ROOT = 'https://sgalal.github.io/opencc2-dict/data/';
+const DICT_ROOT = 'https://cdn.jsdelivr.net/npm/opencc-data/data/';
 
 const DICT_FROM = { 'cn': ['STCharacters', 'STPhrases']
 	, 'hk': ['HKVariantsRev', 'HKVariantsRevPhrases']
@@ -64,6 +60,8 @@ async function load_dict_from(s) {
 	}
 	return d;
 }
+
+/* Load dict */
 
 function all_matches(s, d) {
 	const arr = [];
